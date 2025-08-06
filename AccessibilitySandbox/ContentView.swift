@@ -21,15 +21,12 @@ struct ContentView: View {
         "fireworks"
     ]
     @State private var selectedPicture = Int.random(in: 0...3)
+    @State private var value=10
     var body: some View {
-        Button{
-            selectedPicture = Int.random(in: 0...3)
-        } label: {
-            Image(pictures[selectedPicture])
-                .resizable()
-                .scaledToFit()
+        Button("randy keth orin"){
+            print("tapped")
         }
-        .accessibilityLabel(labels[selectedPicture])
+        .accessibilityInputLabels(["rko","randy","ortin"])
     }
 }
 
